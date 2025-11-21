@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Zen+Kaku+Gothic+Antique:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"
+      defer
+    ></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="main-content">
+        <div class="portfolio-img js-appear-zoom">
+          <img src="img/portfolio.svg" alt="" width="266" height="200" />
+        </div>
+        <!-- /.portfolio-img -->
+        <div class="main-text">
+          <h1 class="main-title js-split">Portfolio</h1>
+          <!-- /.main-title -->
+          <div class="name">
+            <span class="circle js-appear-dot"></span
+            ><!-- /.circle --><span class="circle js-appear-dot"></span
+            ><!-- /.circle --><span class="circle js-appear-dot"></span
+            ><!-- /.circle --><span class="circle js-appear-dot"></span
+            ><!-- /.circle --><span class="circle js-appear-dot"></span
+            ><!-- /.circle --><span class="name-text js-split2"
+              >Yusuke Higashino</span
+            >
+          </div>
+          <!-- /.name -->
+        </div>
+        <!-- /.main-text -->
+      </div>
+      <!-- /.main-content -->
+    </div>
+    <!-- /.main-wrapper -->
+    <div class="menu-wrapper">
+      <nav class="menu">
+        <ul class="menu-list js-appear-zoom">
+          <li class="menu-item">
+            <a href="about.html"
+              ><span class="menu-en">About</span
+              ><span class="menu-ja">私について</span></a
+            ><!-- /.menu-item -->
+          </li>
+          <li class="menu-item">
+            <a href="skills.html"
+              ><span class="menu-en">Skills</span
+              ><span class="menu-ja">スキル</span></a
+            ><!-- /.menu-item -->
+          </li>
+          <li class="menu-item">
+            <a href="works.html"
+              ><span class="menu-en">Works</span
+              ><span class="menu-ja">作品</span></a
+            ><!-- /.menu-item -->
+          </li>
+        </ul>
+        <!-- /.menu-list -->
+      </nav>
+      <!-- /.menu -->
+    </div>
+    <!-- /.menu-wrapper -->
+  </body>
+</html>
