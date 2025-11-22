@@ -182,6 +182,7 @@ home
 .main-wrapper {
   width: 100%;
   height: 60svh;
+  min-height: 460px;
   background-color: var(--darkblue);
   padding-bottom: 50px;
   position: relative;
