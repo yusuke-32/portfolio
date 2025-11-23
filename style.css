@@ -6,6 +6,10 @@
   --white: #ffffff;
 }
 
+/* html {
+  background-color: var(--darkblue);
+} */
+
 body {
   font-family: "Comfortaa", "Zen Kaku Gothic Antique", sans-serif;
   font-size: 16px;
@@ -263,6 +267,7 @@ home
 .menu-wrapper {
   width: 100%;
   height: 40svh;
+  min-height: calc(100svh - 450px);
   background-color: var(--lightyellow);
   padding-block: 30px;
   position: relative;
