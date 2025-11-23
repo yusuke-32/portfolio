@@ -46,7 +46,7 @@ common
 .sub-wrapper {
   width: 100%;
   min-height: 100svh;
-  /* padding: 30px; */
+  padding-bottom: 30px;
   background-color: var(--darkblue);
   position: relative;
   overflow: hidden;
@@ -55,24 +55,27 @@ common
 
 .sub-wrapper::before {
   content: "";
-  width: clamp(180px, 40vw, 280px);
+  /* width: clamp(180px, 40vw, 280px); */
+  width: calc(250px + 2vw);
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--lightblue);
   position: absolute;
-  top: -10%;
-  right: -6%;
+  /* top: -10%; */
+  top: calc(-80px - 2vw);
+  /* right: -6%; */
+  right: calc(-80px - 0.5vw);
 }
 
 .sub-wrapper::after {
-  content: "";
-  width: clamp(400px, 100vw, 1200px);
+  content: none;
+  width: calc(900px + 18vw);
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: var(--lightblue);
   position: absolute;
-  bottom: clamp(-95%, -50vw, -30%);
-  left: clamp(-50%, -40vw, -20%);
+  bottom: calc(-400px - 12vw);
+  left: calc(-400px - 8vw);
   z-index: -1;
 }
 
@@ -164,6 +167,9 @@ common
 }
 
 @media (min-width: 768px) {
+  .sub-wrapper::after {
+    content: "";
+  }
   .sub-title {
     font-size: 130px;
     flex-direction: row;
@@ -452,6 +458,7 @@ skills
 
 .sub-title-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
 }
@@ -460,9 +467,15 @@ skills
   background-image: url("img/skills.svg");
 }
 
+.sub-text {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
 .sub-text-title2 {
   font-size: 32px;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .sub-text-body-title {
@@ -473,11 +486,27 @@ skills
 
 .skill-list {
   display: flex;
+  margin-bottom: 14px;
 }
 
 .skill-item + .skill-item::before {
   content: "/";
   margin-inline: 5px;
+}
+
+@media (min-width: 768px) {
+  .sub-title-wrapper {
+    flex-direction: row;
+  }
+  .sub-text {
+    gap: 60px;
+  }
+  .sub-text-title2 {
+    margin-bottom: 18px;
+  }
+  .skill-list {
+    margin-bottom: 0;
+  }
 }
 
 /* --------------------------------
