@@ -18,13 +18,9 @@ body {
   min-height: 100svh;
 }
 
-/* .mb30 {
-  margin-bottom: 30px;
+body:has(.open) {
+  overflow: hidden;
 }
-
-.mb60 {
-  margin-bottom: 60px;
-} */
 
 .visually-hidden {
   position: absolute !important;
