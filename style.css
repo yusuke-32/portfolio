@@ -18,13 +18,13 @@ body {
   min-height: 100svh;
 }
 
-.mb30 {
+/* .mb30 {
   margin-bottom: 30px;
 }
 
 .mb60 {
   margin-bottom: 60px;
-}
+} */
 
 .visually-hidden {
   position: absolute !important;
@@ -521,7 +521,6 @@ works
   display: flex;
   justify-content: center;
   gap: 40px;
-  font-size: 22px;
   line-height: 1;
   margin-bottom: 60px;
 }
@@ -543,7 +542,7 @@ works
 
 .swiper-area {
   background-color: var(--lightblue);
-  padding: 2% 0 2% 2%;
+  padding: calc(15px + 1vw) 0 calc(15px + 1vw) calc(15px + 1vw);
   border-radius: 20px 0 0 20px;
   box-shadow: 0 0 10px 5px rgba(27, 37, 136, 0.6);
   opacity: 0;
@@ -569,6 +568,12 @@ works
   /* width: 80px; */
   opacity: 1;
 }
+
+@media (min-width: 768px) {
+  .works-category-list {
+    font-size: 22px;
+  }
+}
 /* --------------------------------
 mobile-menu
 -------------------------------- */
@@ -579,8 +584,8 @@ mobile-menu
   border-radius: 25px;
   background-color: var(--darkblue);
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 15px;
+  right: 15px;
   box-shadow: 0 0 10px 5px rgba(27, 37, 136, 0.6);
   z-index: 20;
   transition: width 0.4s, height 0.4s, transform 0.4s;
@@ -669,6 +674,7 @@ mobile-menu
 .mobile-menu-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 24px;
 }
@@ -680,7 +686,7 @@ mobile-menu
 }
 
 .mobile-menu-item::before {
-  content: "";
+  content: none;
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -700,10 +706,8 @@ mobile-menu
 }
 
 @media (any-hover: hover) {
-  .mobile-menu-item:hover::before {
-    transform: scale(1);
-    opacity: 1;
-    animation: hoverCircle 0.8s ease 0.2s;
+  .mobile-menu-item a:hover {
+    opacity: 0.7;
   }
 }
 
@@ -732,6 +736,11 @@ mobile-menu
 }
 
 @media (min-width: 768px) {
+  .mobile-menu-wrapper {
+    top: 30px;
+    right: 30px;
+  }
+
   .mobile-menu {
     top: 30%;
   }
@@ -739,9 +748,26 @@ mobile-menu
     flex-direction: row;
     gap: 60px;
   }
+
+  @media (any-hover: hover) {
+    .mobile-menu-item a:hover {
+      opacity: 1;
+    }
+    .mobile-menu-item:hover::before {
+      transform: scale(1);
+      opacity: 1;
+      animation: hoverCircle 0.8s ease 0.2s;
+    }
+  }
+
+  .mobile-menu-item::before {
+    content: "";
+  }
+
   .mobile-menu-item a {
     gap: 6px;
   }
+
   .mobile-menu-en {
     font-size: 36px;
     letter-spacing: 0.03em;

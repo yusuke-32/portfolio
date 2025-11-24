@@ -106,7 +106,7 @@ const initSwiper = () => {
     // Optional parameters
     loop: true,
     loopAdditionalSlides: 2,
-    slidesPerView: 1.5,
+    slidesPerView: 1.3,
     spaceBetween: 16,
     grabCursor: true,
     watchSlidesProgress: true,
@@ -133,7 +133,7 @@ const initSwiper = () => {
     breakpoints: {
       // ブレークポイント
       767: {
-        slidesPerView: 2.5,
+        slidesPerView: 2.3,
       },
       1025: {
         slidesPerView: 3.5,
