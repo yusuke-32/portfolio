@@ -149,7 +149,7 @@ common
 
 .sub-title::before {
   content: "";
-  width: 130px;
+  width: 110px;
   aspect-ratio: 1;
   background-size: contain;
   background-repeat: no-repeat;
@@ -360,7 +360,7 @@ home
 }
 
 .menu-ja {
-  font-size: clamp(14px, 4vw, 18px);
+  font-size: clamp(16px, 4vw, 18px);
 }
 
 @media (min-width: 768px) {
