@@ -178,7 +178,7 @@ common
   margin-inline: auto;
   background-color: var(--lightblue);
   border-radius: 30px;
-  padding: 50px 20px;
+  padding: 30px 20px;
 }
 
 @media (min-width: 768px) {
@@ -200,6 +200,9 @@ common
   }
   .sub-text {
     gap: 50px;
+  }
+  .sub-text-wrapper {
+    padding: 50px 20px;
   }
 }
 
