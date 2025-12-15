@@ -2,16 +2,44 @@ window.addEventListener("DOMContentLoaded", async () => {
   gsap.registerPlugin(SplitText);
   initTween(); // GSAPの初期化
   initSwiper(); // Swiperの初期化
+  mobileMenu(); // ハンバーガーメニューの初期化
+  toggleDevice(); // worksのデバイス切り替えの初期化
 });
 
-// ハンバーガーメニューの処理
-const mobile_menu_btn = document.querySelector(".mobile-menu-btn");
-const mobile_menu_wrapper = document.querySelector(".mobile-menu-wrapper");
-if (mobile_menu_btn) {
-  mobile_menu_btn.addEventListener("click", () =>
-    mobile_menu_wrapper.classList.toggle("open")
+const mobileMenu = () => {
+  // ハンバーガーメニューの処理
+  const mobile_menu_btn = document.querySelector(".mobile-menu-btn");
+  const mobile_menu_wrapper = document.querySelector(".mobile-menu-wrapper");
+  if (mobile_menu_btn) {
+    mobile_menu_btn.addEventListener("click", () =>
+      mobile_menu_wrapper.classList.toggle("open")
+    );
+  }
+};
+
+const toggleDevice = () => {
+  // worksのデバイス（デスクトップ／モバイル）の切り替え処理
+  const device_item_btn_desktop = document.querySelector(
+    ".device-item-btn-desktop"
   );
-}
+  const device_item_btn_mobile = document.querySelector(
+    ".device-item-btn-mobile"
+  );
+  const web_body_desktop = document.querySelector(".web-body.desktop");
+  const web_body_mobile = document.querySelector(".web-body.mobile");
+  device_item_btn_desktop.addEventListener("click", () => {
+    device_item_btn_desktop.classList.add("active");
+    device_item_btn_mobile.classList.remove("active");
+    web_body_desktop.classList.add("active");
+    web_body_mobile.classList.remove("active");
+  });
+  device_item_btn_mobile.addEventListener("click", () => {
+    device_item_btn_mobile.classList.add("active");
+    device_item_btn_desktop.classList.remove("active");
+    web_body_mobile.classList.add("active");
+    web_body_desktop.classList.remove("active");
+  });
+};
 
 const initTween = () => {
   SplitText.create(".js-split", {
@@ -102,20 +130,21 @@ const initTween = () => {
 };
 
 const initSwiper = () => {
-  const swiper = new Swiper(".swiper", {
+  return new Swiper(".swiper", {
     // Optional parameters
     loop: true,
     loopAdditionalSlides: 2,
-    slidesPerView: 1.3,
-    spaceBetween: 16,
+    slidesPerView: 1.2,
+    spaceBetween: 20,
     grabCursor: true,
-    watchSlidesProgress: true,
+    // centeredSlides: true,
+    // watchSlidesProgress: true,
 
-    speed: 3000, // スライドアニメーションのスピード（ミリ秒）
+    speed: 3500, // スライドアニメーションのスピード（ミリ秒）
 
     autoplay: {
       // 自動再生させる
-      delay: 100, // 次のスライドに切り替わるまでの時間（ミリ秒）
+      delay: 40, // 次のスライドに切り替わるまでの時間（ミリ秒）
       disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
       // waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
     },
@@ -133,10 +162,10 @@ const initSwiper = () => {
     breakpoints: {
       // ブレークポイント
       767: {
-        slidesPerView: 2.3,
+        slidesPerView: 1.7,
       },
-      1025: {
-        slidesPerView: 3.5,
+      1200: {
+        slidesPerView: 2.7,
       },
     },
   });
