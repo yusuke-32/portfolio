@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   initTween(); // GSAPの初期化
   initSwiper(); // Swiperの初期化
   mobileMenu(); // ハンバーガーメニューの初期化
+  switchSite(); // worksのWebサイトの切り替えの初期化
   toggleDevice(); // worksのデバイス切り替えの初期化
 });
 
@@ -15,6 +16,93 @@ const mobileMenu = () => {
       mobile_menu_wrapper.classList.toggle("open")
     );
   }
+};
+
+const switchSite = () => {
+  // worksのWebサイトの切り替え処理
+  const btn_cafe = document.querySelector(".website-item-btn.cafe");
+  const btn_clinic = document.querySelector(".website-item-btn.clinic");
+  const btn_journey = document.querySelector(".website-item-btn.journey");
+
+  const btn_mobile_cafe = document.querySelector(
+    ".mobile-website-switch-btn.cafe"
+  );
+  const btn_mobile_clinic = document.querySelector(
+    ".mobile-website-switch-btn.clinic"
+  );
+  const btn_mobile_journey = document.querySelector(
+    ".mobile-website-switch-btn.journey"
+  );
+
+  const img_cafe = document.querySelectorAll(".web-body-img-cafe");
+  const img_clinic = document.querySelectorAll(".web-body-img-clinic");
+  const img_journey = document.querySelectorAll(".web-body-img-journey");
+
+  const removeClass = function () {
+    // デバッグ: 要素が存在するか確認
+    console.log("btn_cafe:", btn_cafe);
+    console.log("btn_mobile_cafe:", btn_mobile_cafe);
+    console.log("img_cafe:", img_cafe);
+    btn_cafe.classList.remove("active");
+    btn_clinic.classList.remove("active");
+    btn_journey.classList.remove("active");
+    console.log(btn_mobile_cafe);
+    btn_mobile_cafe.classList.remove("active");
+    btn_mobile_clinic.classList.remove("active");
+    btn_mobile_journey.classList.remove("active");
+
+    img_cafe.forEach((el) => {
+      el.classList.remove("active");
+    });
+    img_clinic.forEach((el) => {
+      el.classList.remove("active");
+    });
+    img_journey.forEach((el) => {
+      el.classList.remove("active");
+    });
+  };
+  btn_cafe.addEventListener("click", () => {
+    removeClass();
+    btn_cafe.classList.add("active");
+    img_cafe.forEach((el) => {
+      el.classList.add("active");
+    });
+  });
+  btn_clinic.addEventListener("click", () => {
+    removeClass();
+    btn_clinic.classList.add("active");
+    img_clinic.forEach((el) => {
+      el.classList.add("active");
+    });
+  });
+  btn_journey.addEventListener("click", () => {
+    removeClass();
+    btn_journey.classList.add("active");
+    img_journey.forEach((el) => {
+      el.classList.add("active");
+    });
+  });
+  btn_mobile_cafe.addEventListener("click", () => {
+    removeClass();
+    btn_mobile_cafe.classList.add("active");
+    img_cafe.forEach((el) => {
+      el.classList.add("active");
+    });
+  });
+  btn_mobile_clinic.addEventListener("click", () => {
+    removeClass();
+    btn_mobile_clinic.classList.add("active");
+    img_clinic.forEach((el) => {
+      el.classList.add("active");
+    });
+  });
+  btn_mobile_journey.addEventListener("click", () => {
+    removeClass();
+    btn_mobile_journey.classList.add("active");
+    img_journey.forEach((el) => {
+      el.classList.add("active");
+    });
+  });
 };
 
 const toggleDevice = () => {

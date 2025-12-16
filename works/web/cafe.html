@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <title>Works | Portfolio</title>
-    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,13 +29,13 @@
       src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
       defer
     ></script>
-    <script src="main.js" defer></script>
+    <script src="../../main.js" defer></script>
   </head>
   <body>
     <div class="sub-wrapper">
       <div class="breadcrumb">
-        <a href="index.html">ホーム</a>
-        <img src="img/breadcrumb.svg" alt="" width="12" height="12" />
+        <a href="../../index.html">ホーム</a>
+        <img src="../../img/breadcrumb.svg" alt="" width="12" height="12" />
         <span>作品</span>
       </div>
       <!-- /.breadcrumb -->
@@ -50,28 +50,28 @@
         <nav class="mobile-menu">
           <ul class="mobile-menu-list">
             <li class="mobile-menu-item js-appear-up">
-              <a href="index.html"
+              <a href="../../index.html"
                 ><span class="mobile-menu-en">Home</span
                 ><span class="mobile-menu-ja">ホーム</span></a
               >
             </li>
             <!-- /.mobile-menu-item -->
             <li class="mobile-menu-item">
-              <a href="about.html"
+              <a href="../../about.html"
                 ><span class="mobile-menu-en">About</span
                 ><span class="mobile-menu-ja">私について</span></a
               >
             </li>
             <!-- /.mobile-menu-item -->
             <li class="mobile-menu-item">
-              <a href="skills.html"
+              <a href="../../skills.html"
                 ><span class="mobile-menu-en">Skills</span
                 ><span class="mobile-menu-ja">スキル</span></a
               >
             </li>
             <!-- /.mobile-menu-item -->
             <li class="mobile-menu-item">
-              <a href="works.html"
+              <a href="../banner.html"
                 ><span class="mobile-menu-en">Works</span
                 ><span class="mobile-menu-ja">作品</span></a
               >
@@ -93,24 +93,28 @@
               <li class="works-category-item"><a href="">チラシ</a></li>
               <!-- /.works-category-item -->
               <li class="works-category-item">
-                <a href="works-banner.html">バナー</a>
+                <a href="../banner.html">バナー</a>
               </li>
               <!-- /.works-category-item -->
               <li class="works-category-item active">
                 WEBサイト
                 <ul class="website-list">
                   <li class="website-item">
-                    <button class="website-item-btn active">Café Lumen</button>
+                    <button class="website-item-btn cafe active">
+                      Café Lumen
+                    </button>
                   </li>
                   <!-- /.website-item -->
                   <li class="website-item">
-                    <button class="website-item-btn">
+                    <button class="website-item-btn clinic">
                       そよぎメンタル<span>クリニック</span>
                     </button>
                   </li>
                   <!-- /.website-item -->
                   <li class="website-item">
-                    <button class="website-item-btn">Journey Note</button>
+                    <button class="website-item-btn journey">
+                      Journey Note
+                    </button>
                   </li>
                   <!-- /.website-item -->
                 </ul>
@@ -119,6 +123,21 @@
               <!-- /.works-category-item -->
             </ul>
             <!-- /.works-category-list -->
+            <div class="mobile-website-switch">
+              <button class="mobile-website-switch-btn cafe active">
+                <span class="visually-hidden">Webサイトの切り替えボタン</span
+                ><!-- /.visually-hidden -->
+              </button>
+              <button class="mobile-website-switch-btn clinic">
+                <span class="visually-hidden">Webサイトの切り替えボタン</span
+                ><!-- /.visually-hidden -->
+              </button>
+              <button class="mobile-website-switch-btn journey">
+                <span class="visually-hidden">Webサイトの切り替えボタン</span
+                ><!-- /.visually-hidden -->
+              </button>
+            </div>
+            <!-- /.mobile-website-switch -->
           </div>
           <!-- /.works-category -->
           <div class="web-wrapper js-appear-up">
@@ -139,7 +158,22 @@
             <div class="web-body desktop active">
               <div class="web-body-img">
                 <img
-                  src="img/Cafe Lumen(pc).jpg"
+                  class="web-body-img-cafe active"
+                  src="../../img/Cafe Lumen(pc).jpg"
+                  width="868"
+                  height="2724"
+                  alt=""
+                  decoding="async"
+                /><img
+                  class="web-body-img-clinic"
+                  src="../../img/soyogi(pc).jpg"
+                  width="868"
+                  height="2724"
+                  alt=""
+                  decoding="async"
+                /><img
+                  class="web-body-img-journey"
+                  src="../../img/Journey Note(pc).jpg"
                   width="868"
                   height="2724"
                   alt=""
@@ -152,7 +186,22 @@
             <div class="web-body mobile">
               <div class="web-body-img">
                 <img
-                  src="img/Cafe Lumen(sp).jpg"
+                  class="web-body-img-cafe active"
+                  src="../../img/Cafe Lumen(sp).jpg"
+                  width="368"
+                  height="6280"
+                  alt=""
+                  decoding="async"
+                /><img
+                  class="web-body-img-clinic"
+                  src="../../img/soyogi(sp).jpg"
+                  width="368"
+                  height="6280"
+                  alt=""
+                  decoding="async"
+                /><img
+                  class="web-body-img-journey"
+                  src="../../img/Journey Note(sp).jpg"
                   width="368"
                   height="6280"
                   alt=""
