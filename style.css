@@ -691,6 +691,7 @@ works
   box-shadow: 0 0 10px 5px rgba(27, 37, 136, 0.6);
   max-width: 1000px;
   height: calc(100svh - 460px);
+  min-height: 580px;
   overflow: scroll;
   scrollbar-color: var(--white) transparent;
   display: none;
