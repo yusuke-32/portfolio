@@ -64,6 +64,7 @@ const switchSite = () => {
   btn_cafe.addEventListener("click", () => {
     removeClass();
     btn_cafe.classList.add("active");
+    btn_mobile_cafe.classList.add("active");
     img_cafe.forEach((el) => {
       el.classList.add("active");
     });
@@ -71,6 +72,7 @@ const switchSite = () => {
   btn_clinic.addEventListener("click", () => {
     removeClass();
     btn_clinic.classList.add("active");
+    btn_mobile_clinic.classList.add("active");
     img_clinic.forEach((el) => {
       el.classList.add("active");
     });
@@ -78,12 +80,14 @@ const switchSite = () => {
   btn_journey.addEventListener("click", () => {
     removeClass();
     btn_journey.classList.add("active");
+    btn_mobile_journey.classList.add("active");
     img_journey.forEach((el) => {
       el.classList.add("active");
     });
   });
   btn_mobile_cafe.addEventListener("click", () => {
     removeClass();
+    btn_cafe.classList.add("active");
     btn_mobile_cafe.classList.add("active");
     img_cafe.forEach((el) => {
       el.classList.add("active");
@@ -91,6 +95,7 @@ const switchSite = () => {
   });
   btn_mobile_clinic.addEventListener("click", () => {
     removeClass();
+    btn_clinic.classList.add("active");
     btn_mobile_clinic.classList.add("active");
     img_clinic.forEach((el) => {
       el.classList.add("active");
@@ -98,6 +103,7 @@ const switchSite = () => {
   });
   btn_mobile_journey.addEventListener("click", () => {
     removeClass();
+    btn_journey.classList.add("active");
     btn_mobile_journey.classList.add("active");
     img_journey.forEach((el) => {
       el.classList.add("active");
@@ -230,11 +236,11 @@ const initSwiper = () => {
       // centeredSlides: true,
       // watchSlidesProgress: true,
 
-      speed: 3500, // スライドアニメーションのスピード（ミリ秒）
+      speed: 1000, // スライドアニメーションのスピード（ミリ秒）
 
       autoplay: {
         // 自動再生させる
-        delay: 40, // 次のスライドに切り替わるまでの時間（ミリ秒）
+        delay: 4000, // 次のスライドに切り替わるまでの時間（ミリ秒）
         disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
         // waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
       },
