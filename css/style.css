@@ -653,6 +653,17 @@ works
   margin-left: auto;
 }
 
+.swiper-modal {
+  width: 65vh;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.swiper-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .my-swiper-pagination {
   display: flex;
   justify-content: center;
@@ -666,7 +677,9 @@ works
   height: 10px;
   border-radius: 6px;
   opacity: 0.5;
-  transition: width 1.2s, opacity 1.2s;
+  transition:
+    width 1.2s,
+    opacity 1.2s;
 }
 
 .swiper-pagination-bullet-active {
@@ -695,7 +708,9 @@ works
 .device-item-btn {
   padding: 2px 14px;
   border-radius: 100svh;
-  transition: background-color 0.4s, color 0.4s;
+  transition:
+    background-color 0.4s,
+    color 0.4s;
 }
 
 .device-item-btn.active {
@@ -823,7 +838,10 @@ mobile-menu
   right: 15px;
   box-shadow: 0 0 10px 5px rgba(27, 37, 136, 0.6);
   z-index: 20;
-  transition: width 0.4s, height 0.4s, transform 0.4s;
+  transition:
+    width 0.4s,
+    height 0.4s,
+    transform 0.4s;
 }
 
 .mobile-menu-wrapper.open {
@@ -928,7 +946,9 @@ mobile-menu
   background-color: var(--lightyellow);
   opacity: 0;
   transform: scale(0);
-  transition: transform 0.4s, opacity 0.4s;
+  transition:
+    transform 0.4s,
+    opacity 0.4s;
 }
 
 .mobile-menu-item a {

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,7 +26,7 @@
       defer
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
       defer
     ></script>
     <script src="../main.js" defer></script>
@@ -90,11 +90,11 @@
         <div class="sub-body">
           <div class="works-category">
             <ul class="works-category-list">
-              <li class="works-category-item">
-                <a href="flyer.html">チラシ</a>
-              </li>
+              <li class="works-category-item active">チラシ</li>
               <!-- /.works-category-item -->
-              <li class="works-category-item active">バナー</li>
+              <li class="works-category-item">
+                <a href="banner.html">バナー</a>
+              </li>
               <!-- /.works-category-item -->
               <li class="works-category-item">
                 <a href="web.html">WEBサイト</a>
@@ -107,17 +107,46 @@
           <!-- /.sub-content -->
           <!-- Slider main container -->
           <div class="swiper-area js-appear-up">
-            <div class="swiper swiper-banner">
+            <div class="swiper swiper-flyer">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
                   <div class="swiper-item">
-                    <div class="swiper-img">
+                    <button
+                      class="swiper-img flyer"
+                      command="show-modal"
+                      commandfor="my-dialog"
+                    >
                       <img
-                        src="../img/banner-travel.jpg"
-                        width="600"
-                        height="500"
+                        src="../img/flyer-kura.jpg"
+                        width="1240"
+                        height="1754"
+                        alt="バナー"
+                        decoding="async"
+                      />
+                    </button>
+                    <!-- /.swiper-img -->
+                    <dialog closedby="any" id="my-dialog" class="swiper-modal">
+                      <img
+                        src="../img/flyer-kura.jpg"
+                        width="1240"
+                        height="1754"
+                        alt="バナー"
+                        decoding="async"
+                      />
+                    </dialog>
+                    <!-- /.swiper-modal -->
+                  </div>
+                  <!-- /.swiper-item -->
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-item">
+                    <div class="swiper-img flyer">
+                      <img
+                        src="../img/flyer-fes.jpg"
+                        width="1240"
+                        height="1754"
                         alt="バナー"
                         decoding="async"
                       />
@@ -128,11 +157,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-item">
-                    <div class="swiper-img">
+                    <div class="swiper-img flyer">
                       <img
-                        src="../img/banner-study.jpg"
-                        width="600"
-                        height="500"
+                        src="../img/flyer-kids.jpg"
+                        width="1240"
+                        height="1754"
                         alt="バナー"
                         decoding="async"
                       />
@@ -143,11 +172,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-item">
-                    <div class="swiper-img">
+                    <div class="swiper-img flyer">
                       <img
-                        src="../img/banner-yoga.jpg"
-                        width="600"
-                        height="500"
+                        src="../img/flyer-pizza.jpg"
+                        width="1240"
+                        height="1754"
                         alt="バナー"
                         decoding="async"
                       />
@@ -158,11 +187,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-item">
-                    <div class="swiper-img">
+                    <div class="swiper-img flyer">
                       <img
-                        src="../img/banner-tech.jpg"
-                        width="600"
-                        height="500"
+                        src="../img/flyer-haihin.jpg"
+                        width="1240"
+                        height="1754"
                         alt="バナー"
                         decoding="async"
                       />
@@ -173,56 +202,11 @@
                 </div>
                 <div class="swiper-slide">
                   <div class="swiper-item">
-                    <div class="swiper-img">
+                    <div class="swiper-img flyer">
                       <img
-                        src="../img/banner-run.jpg"
-                        width="600"
-                        height="500"
-                        alt="バナー"
-                        decoding="async"
-                      />
-                    </div>
-                    <!-- /.swiper-img -->
-                  </div>
-                  <!-- /.swiper-item -->
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-item">
-                    <div class="swiper-img">
-                      <img
-                        src="../img/banner-maccha.jpg"
-                        width="600"
-                        height="500"
-                        alt="バナー"
-                        decoding="async"
-                      />
-                    </div>
-                    <!-- /.swiper-img -->
-                  </div>
-                  <!-- /.swiper-item -->
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-item">
-                    <div class="swiper-img">
-                      <img
-                        src="../img/banner-podcast.jpg"
-                        width="600"
-                        height="500"
-                        alt="バナー"
-                        decoding="async"
-                      />
-                    </div>
-                    <!-- /.swiper-img -->
-                  </div>
-                  <!-- /.swiper-item -->
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-item">
-                    <div class="swiper-img">
-                      <img
-                        src="../img/banner-baby.jpg"
-                        width="600"
-                        height="500"
+                        src="../img/flyer-camp.jpg"
+                        width="1240"
+                        height="1754"
                         alt="バナー"
                         decoding="async"
                       />

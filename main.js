@@ -13,7 +13,7 @@ const mobileMenu = () => {
   const mobile_menu_wrapper = document.querySelector(".mobile-menu-wrapper");
   if (mobile_menu_btn) {
     mobile_menu_btn.addEventListener("click", () =>
-      mobile_menu_wrapper.classList.toggle("open")
+      mobile_menu_wrapper.classList.toggle("open"),
     );
   }
 };
@@ -25,13 +25,13 @@ const switchSite = () => {
   const btn_journey = document.querySelector(".website-item-btn.journey");
 
   const btn_mobile_cafe = document.querySelector(
-    ".mobile-website-switch-btn.cafe"
+    ".mobile-website-switch-btn.cafe",
   );
   const btn_mobile_clinic = document.querySelector(
-    ".mobile-website-switch-btn.clinic"
+    ".mobile-website-switch-btn.clinic",
   );
   const btn_mobile_journey = document.querySelector(
-    ".mobile-website-switch-btn.journey"
+    ".mobile-website-switch-btn.journey",
   );
 
   const img_cafe = document.querySelectorAll(".web-body-img-cafe");
@@ -114,10 +114,10 @@ const switchSite = () => {
 const toggleDevice = () => {
   // worksのデバイス（デスクトップ／モバイル）の切り替え処理
   const device_item_btn_desktop = document.querySelector(
-    ".device-item-btn-desktop"
+    ".device-item-btn-desktop",
   );
   const device_item_btn_mobile = document.querySelector(
-    ".device-item-btn-mobile"
+    ".device-item-btn-mobile",
   );
   const web_body_desktop = document.querySelector(".web-body.desktop");
   const web_body_mobile = document.querySelector(".web-body.mobile");
@@ -152,7 +152,7 @@ const initTween = () => {
           autoAlpha: 1,
           stagger: 0.08,
           ease: "power4",
-        }
+        },
       );
     },
   });
@@ -173,7 +173,7 @@ const initTween = () => {
           autoAlpha: 1,
           stagger: 0.05,
           ease: "power4",
-        }
+        },
       );
     },
   });
@@ -186,7 +186,7 @@ const initTween = () => {
       scale: 1,
       duration: 0.8,
       stagger: 0.3,
-    }
+    },
   );
   gsap.fromTo(
     ".js-appear-dot",
@@ -200,7 +200,7 @@ const initTween = () => {
       scale: 1,
       duration: 1,
       stagger: 0.08,
-    }
+    },
   );
   gsap.fromTo(
     ".js-appear-up",
@@ -213,7 +213,7 @@ const initTween = () => {
       y: 0,
       duration: 0.6,
       stagger: 0.3,
-    }
+    },
   );
   gsap.to(".js-split", {
     opacity: 1,
@@ -224,9 +224,51 @@ const initTween = () => {
 };
 
 const initSwiper = () => {
-  const swiper = document.querySelector(".swiper");
-  if (swiper) {
-    return new Swiper(".swiper", {
+  const swiperFlyer = document.querySelector(".swiper-flyer");
+  if (swiperFlyer) {
+    return new Swiper(".swiper-flyer", {
+      // Optional parameters
+      loop: true,
+      loopAdditionalSlides: 2,
+      slidesPerView: 1.8,
+      spaceBetween: 20,
+      grabCursor: true,
+      // centeredSlides: true,
+      // watchSlidesProgress: true,
+
+      speed: 1000, // スライドアニメーションのスピード（ミリ秒）
+
+      autoplay: {
+        // 自動再生させる
+        delay: 3000, // 次のスライドに切り替わるまでの時間（ミリ秒）
+        disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
+        // waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".my-swiper-pagination", // ページネーション要素のクラス
+        // clickable: true, // クリックによるスライド切り替えを有効にする
+        type: "bullets", // 'bullets'（デフォルト） | 'fraction' | 'progressbar'
+      },
+      breakpoints: {
+        // ブレークポイント
+        767: {
+          slidesPerView: 3.2,
+        },
+        1200: {
+          slidesPerView: 4.3,
+        },
+      },
+    });
+  }
+  const swiperBanner = document.querySelector(".swiper-banner");
+  if (swiperBanner) {
+    return new Swiper(".swiper-banner", {
       // Optional parameters
       loop: true,
       loopAdditionalSlides: 2,
@@ -240,7 +282,7 @@ const initSwiper = () => {
 
       autoplay: {
         // 自動再生させる
-        delay: 4000, // 次のスライドに切り替わるまでの時間（ミリ秒）
+        delay: 3000, // 次のスライドに切り替わるまでの時間（ミリ秒）
         disableOnInteraction: false, // ユーザーが操作しても自動再生を止めない
         // waitForTransition: false, // アニメーションの間も自動再生を止めない（最初のスライドの表示時間を揃えたいときに）
       },
