@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   initTween(); // GSAPの初期化
   initSwiper(); // Swiperの初期化
   mobileMenu(); // ハンバーガーメニューの初期化
+  showModal(); // チラシのモーダルの初期化
   switchSite(); // worksのWebサイトの切り替えの初期化
   toggleDevice(); // worksのデバイス切り替えの初期化
 });
@@ -16,6 +17,28 @@ const mobileMenu = () => {
       mobile_menu_wrapper.classList.toggle("open"),
     );
   }
+};
+
+const showModal = () => {
+  // チラシのモーダルの処理
+  const show_modal_btn = document.querySelectorAll(".swiper-img");
+  const modalDialog = document.querySelectorAll(".swiper-modal");
+  // 開く時
+  show_modal_btn.forEach((button) => {
+    const dialog = document.querySelector(button.dataset.dialog);
+    console.log(dialog);
+
+    button.addEventListener("click", () => {
+      dialog.showModal();
+    });
+  });
+
+  // 閉じる時
+  modalDialog.forEach((dialog) => {
+    dialog.addEventListener("click", () => {
+      dialog.close();
+    });
+  });
 };
 
 const switchSite = () => {
@@ -272,7 +295,7 @@ const initSwiper = () => {
       // Optional parameters
       loop: true,
       loopAdditionalSlides: 2,
-      slidesPerView: 1.2,
+      slidesPerView: 1.7,
       spaceBetween: 20,
       grabCursor: true,
       // centeredSlides: true,
@@ -300,10 +323,10 @@ const initSwiper = () => {
       breakpoints: {
         // ブレークポイント
         767: {
-          slidesPerView: 1.7,
+          slidesPerView: 2.2,
         },
         1200: {
-          slidesPerView: 2.7,
+          slidesPerView: 3.2,
         },
       },
     });
