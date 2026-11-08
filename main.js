@@ -26,7 +26,7 @@ const showModal = () => {
   // 開く時
   show_modal_btn.forEach((button) => {
     const dialog = document.querySelector(button.dataset.dialog);
-    console.log(dialog);
+    // console.log(dialog);
 
     button.addEventListener("click", () => {
       dialog.showModal();
